@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:favorite_places/models/place.dart';
 import 'package:favorite_places/providers/place_provider.dart';
+import 'package:favorite_places/widgets/input_location.dart';
 import 'package:favorite_places/widgets/input_picture.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -62,6 +63,8 @@ class _AddNewItemState extends ConsumerState<AddNewItem> {
               onPickImage: (File image) {
                 _image = image;
               },),
+            const SizedBox(height: 16,),
+            const InputLocation(),
             const SizedBox(height: 16,),
             ElevatedButton.icon(
               onPressed: _saveItem,
